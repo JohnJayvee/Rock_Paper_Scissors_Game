@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Scoreboard = ({ score }) => {
     return (
@@ -10,6 +12,11 @@ const Scoreboard = ({ score }) => {
     );
 };
 
-
+Scoreboard.propTypes = {
+    score: PropTypes.shape({
+        player: PropTypes.string.isRequired,
+        computer: PropTypes.string.isRequired,
+    }).isRequired,
+};
 
 export default Scoreboard;
