@@ -8,7 +8,7 @@ const Result = ({ playerChoice, computerChoice, result, openModal }) => {
         } else if (result === 'computer') {
             return 'red'; // Computer wins
         } else {
-            return ''; // Draw
+            return '#6f6261'; // Draw
         }
     };
 
@@ -18,7 +18,7 @@ const Result = ({ playerChoice, computerChoice, result, openModal }) => {
                 <div>
                     <p>Player: {playerChoice}</p>
                     <p>Computer: {computerChoice}</p>
-                    <p style={{ color: getResultColor() }}>Result: {result}</p>
+                    <p style={{ color: getResultColor(), fontWeight: 'Bold', fontSize: '20px' }}>Result: {result}</p>
                 </div>
             )}
             <button style={{ backgroundColor: 'grey' }} onClick={openModal}>Show History</button>
